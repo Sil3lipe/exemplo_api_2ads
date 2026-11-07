@@ -57,29 +57,36 @@ exemplo_api_2ads/
 ## 🛠️ Instalação e Execução
 
 ### 1. Clonar o repositório
+
 ```bash
 git clone https://github.com/Sil3lipe/exemplo_api_2ads.git
 cd exemplo_api_2ads
 ```
 
 ### 2. Instalar as dependências
+
 ```bash
 npm install
 ```
 
 ### 3. Inicializar o Banco de Dados
+
 Execute o script para criar o arquivo `database.db` e as tabelas necessárias:
+
 ```bash
 npm run db:init
 ```
 
 ### 4. Popular o Banco com Dados Iniciais (Opcional)
+
 Para inserir clientes e produtos padrão para testes:
+
 ```bash
 npm run db:seed
 ```
 
 ### 5. Iniciar o Servidor em Desenvolvimento
+
 ```bash
 npm run dev
 ```
@@ -112,7 +119,8 @@ A API estará rodando em: `http://localhost:3000`
 | `PUT` | `/products/:id` | Atualiza dados de um produto | `200 OK` |
 | `DELETE` | `/products/:id` | Remove um produto (se não estiver em pedidos) | `204 No Content` |
 
-#### Exemplo de Payload para Criar Produto (`POST /products`):
+#### Exemplo de Payload para Criar Produto (`POST /products`)
+
 ```json
 {
   "name": "Arroz Integral 1kg",
@@ -134,7 +142,8 @@ A API estará rodando em: `http://localhost:3000`
 | `GET` | `/customers/:id/orders` | Lista os pedidos realizados pelo cliente | `200 OK` |
 | `DELETE` | `/customers/:id` | Remove um cliente | `204 No Content` |
 
-#### Exemplo de Payload para Criar Cliente (`POST /customers`):
+#### Exemplo de Payload para Criar Cliente (`POST /customers`)
+
 ```json
 {
   "name": "Maria Silva",
@@ -153,7 +162,8 @@ A API estará rodando em: `http://localhost:3000`
 | `GET` | `/orders/:id` | Retorna um pedido específico com seus itens | `200 OK` |
 | `POST` | `/orders` | Cria um novo pedido calculando o total | `201 Created` |
 
-#### Exemplo de Payload para Criar Pedido (`POST /orders`):
+#### Exemplo de Payload para Criar Pedido (`POST /orders`)
+
 ```json
 {
   "customer_id": 1,
